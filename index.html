@@ -4,38 +4,46 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
 
   <title>PSYCHE BASIL — Debug the Human Operating System</title>
 
   <meta name="description"
-        content="Psyche Basil is a faceless educational media brand exploring psychology, human behavior, cognitive biases, persuasion, decision-making, mental models, and emotional behavior through concise cinematic breakdowns.">
+        content="Psyche Basil decodes psychology, cognitive biases, persuasion, and decision-making through cinematic breakdowns of human behavior.">
 
-  <meta name="robots"
-        content="index, follow">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Psyche Basil">
 
-  <meta name="author"
-        content="Psyche Basil">
+  <link rel="canonical" href="https://basil-gif.github.io/psyche-basil/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  <link rel="canonical"
-        href="https://basil-gif.github.io/psyche-basil/">
+  <!-- Fonts: preconnect + link (replaces @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="style.css">
 
   <!-- Open Graph -->
-
   <meta property="og:title"
         content="PSYCHE BASIL — Debug the Human Operating System">
-
   <meta property="og:description"
         content="Psychology, human behavior, cognitive biases, persuasion, decision-making, and mental models.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://basil-gif.github.io/psyche-basil/">
+  <meta property="og:image" content="https://basil-gif.github.io/psyche-basil/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-  <meta property="og:type"
-        content="website">
-
-  <meta property="og:url"
-        content="https://basil-gif.github.io/psyche-basil/">
-
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+        content="PSYCHE BASIL — Debug the Human Operating System">
+  <meta name="twitter:description"
+        content="Psychology, human behavior, cognitive biases, persuasion, decision-making, mental models.">
+  <meta name="twitter:image" content="https://basil-gif.github.io/psyche-basil/og.png">
 
   <!-- =========================
        PSYCHE BASIL ENTITY
@@ -45,19 +53,14 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-
     "@id": "https://basil-gif.github.io/psyche-basil/#organization",
-
     "name": "Psyche Basil",
-
-    "alternateName": "@psyche_basil",
-
+    "alternateName": "@psyche-basil",
     "url": "https://basil-gif.github.io/psyche-basil/",
-
+    "logo": "https://basil-gif.github.io/psyche-basil/logo.png",
+    "image": "https://basil-gif.github.io/psyche-basil/og.png",
     "description": "Psyche Basil is a faceless educational media brand exploring psychology, human behavior, cognitive biases, persuasion, decision-making, mental models, and emotional behavior through concise cinematic breakdowns. Its Human Operating System framework examines behavior through Hardware, Software, User, and Network layers.",
-
     "slogan": "Debug the Human Operating System",
-
     "knowsAbout": [
       "Psychology",
       "Human Behavior",
@@ -69,29 +72,33 @@
       "Mental Models",
       "Emotional Regulation"
     ],
-
     "sameAs": [
-      "https://www.youtube.com/@psyche_basil"
+      "https://www.youtube.com/@psyche-basil"
     ]
   }
   </script>
-
-  <link rel="stylesheet"
-        href="style.css">
 
 </head>
 
 
 <body>
 
-<main>
+<a class="skip" href="#main">Skip to content</a>
 
+<main id="main">
 
   <!-- =========================
        HERO
        ========================= -->
 
   <section class="hero">
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">ABOUT</a>
+      <a href="#framework">FRAMEWORK</a>
+      <a href="#topics">TOPICS</a>
+      <a href="#channel">CHANNEL</a>
+    </nav>
 
     <p class="eyebrow">
       PSYCHOLOGY / HUMAN BEHAVIOR
@@ -111,11 +118,10 @@
       decoded through concise cinematic breakdowns.
     </p>
 
-    <a
-      class="youtube"
-      href="https://www.youtube.com/@psyche_basil"
-      target="_blank"
-      rel="noopener">
+    <a class="youtube"
+       href="https://www.youtube.com/@psyche-basil"
+       target="_blank"
+       rel="noopener">
 
       WATCH ON YOUTUBE
 
@@ -128,7 +134,7 @@
        ABOUT
        ========================= -->
 
-  <section class="section">
+  <section class="section" id="about">
 
     <p class="section-label">
       ABOUT
@@ -159,7 +165,7 @@
        HUMAN OS
        ========================= -->
 
-  <section class="section">
+  <section class="section" id="framework">
 
     <p class="section-label">
       THE FRAMEWORK
@@ -170,92 +176,36 @@
       OPERATING SYSTEM
     </h2>
 
-
     <div class="layer">
-
-      <span class="number">
-        01
-      </span>
-
+      <span class="number">01</span>
       <div>
-
-        <h3>
-          HARDWARE
-        </h3>
-
-        <p>
-          Brain, biology, dopamine, stress,
-          instincts, and physiology.
-        </p>
-
+        <h3>HARDWARE</h3>
+        <p>Brain, biology, dopamine, stress, instincts, and physiology.</p>
       </div>
-
     </div>
 
-
     <div class="layer">
-
-      <span class="number">
-        02
-      </span>
-
+      <span class="number">02</span>
       <div>
-
-        <h3>
-          SOFTWARE
-        </h3>
-
-        <p>
-          Beliefs, cognitive biases, habits,
-          mental patterns, and thinking.
-        </p>
-
+        <h3>SOFTWARE</h3>
+        <p>Beliefs, cognitive biases, habits, mental patterns, and thinking.</p>
       </div>
-
     </div>
 
-
     <div class="layer">
-
-      <span class="number">
-        03
-      </span>
-
+      <span class="number">03</span>
       <div>
-
-        <h3>
-          USER
-        </h3>
-
-        <p>
-          Identity, self-awareness, choices,
-          emotions, and decisions.
-        </p>
-
+        <h3>USER</h3>
+        <p>Identity, self-awareness, choices, emotions, and decisions.</p>
       </div>
-
     </div>
 
-
     <div class="layer">
-
-      <span class="number">
-        04
-      </span>
-
+      <span class="number">04</span>
       <div>
-
-        <h3>
-          NETWORK
-        </h3>
-
-        <p>
-          Society, relationships, persuasion,
-          social influence, and group behavior.
-        </p>
-
+        <h3>NETWORK</h3>
+        <p>Society, relationships, persuasion, social influence, and group behavior.</p>
       </div>
-
     </div>
 
   </section>
@@ -265,7 +215,9 @@
        TOPICS
        ========================= -->
 
-  <section class="section">
+  <section class="section" id="topics">
+
+    <h2 class="visually-hidden">Topics</h2>
 
     <p class="section-label">
       WHAT WE EXPLORE
@@ -273,13 +225,26 @@
 
     <div class="topics">
 
-      <span>COGNITIVE BIASES</span>
-      <span>HUMAN BEHAVIOR</span>
-      <span>DECISION MAKING</span>
-      <span>PERSUASION</span>
-      <span>MENTAL MODELS</span>
-      <span>SOCIAL PSYCHOLOGY</span>
-      <span>EMOTIONAL REGULATION</span>
+      <a href="https://www.youtube.com/@psyche-basil/search?query=cognitive+biases"
+         target="_blank" rel="noopener">COGNITIVE BIASES</a>
+
+      <a href="https://www.youtube.com/@psyche-basil/search?query=human+behavior"
+         target="_blank" rel="noopener">HUMAN BEHAVIOR</a>
+
+      <a href="https://www.youtube.com/@psyche-basil/search?query=decision+making"
+         target="_blank" rel="noopener">DECISION MAKING</a>
+
+      <a href="https://www.youtube.com/@psyche-basil/search?query=persuasion"
+         target="_blank" rel="noopener">PERSUASION</a>
+
+      <a href="https://www.youtube.com/@psyche-basil/search?query=mental+models"
+         target="_blank" rel="noopener">MENTAL MODELS</a>
+
+      <a href="https://www.youtube.com/@psyche-basil/search?query=social+psychology"
+         target="_blank" rel="noopener">SOCIAL PSYCHOLOGY</a>
+
+      <a href="https://www.youtube.com/@psyche-basil/search?query=emotional+regulation"
+         target="_blank" rel="noopener">EMOTIONAL REGULATION</a>
 
     </div>
 
@@ -290,14 +255,14 @@
        CHANNEL
        ========================= -->
 
-  <section class="channel">
+  <section class="channel" id="channel">
 
     <p class="section-label">
       OFFICIAL CHANNEL
     </p>
 
     <h2>
-      @PSYCHE_BASIL
+      @PSYCHE-BASIL
     </h2>
 
     <p class="section-text">
@@ -307,11 +272,10 @@
 
     </p>
 
-    <a
-      class="youtube"
-      href="https://www.youtube.com/@psyche_basil"
-      target="_blank"
-      rel="noopener">
+    <a class="youtube"
+       href="https://www.youtube.com/@psyche-basil"
+       target="_blank"
+       rel="noopener">
 
       ENTER THE CHANNEL
 
@@ -319,25 +283,21 @@
 
   </section>
 
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
-  <footer>
-
-    <strong>
-      PSYCHE BASIL
-    </strong>
-
-    <span>
-      DEBUG THE HUMAN OPERATING SYSTEM
-    </span>
-
-  </footer>
-
-
 </main>
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer>
+
+  <strong>PSYCHE BASIL</strong>
+
+  <span>DEBUG THE HUMAN OPERATING SYSTEM</span>
+
+</footer>
+
 
 </body>
 
