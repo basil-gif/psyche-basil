@@ -1,20 +1,20 @@
 :root {
   color-scheme: dark;
-  --black: #080B14;
-  --white: #E2E8F0;
-  --muted: #94A3B8;
+  --black: #050505;
+  --white: #F4F4F0;
+  --muted: #858585;
 
-  /* Accent: cyan is the main accent, orange is the secondary accent */
-  --gold: #00D5E8;
-  --gold-soft: #FF684A;
-  --gold-rgb: 0, 213, 232;
-  --soft-rgb: 255, 104, 74;
+  /* Default theme: original matte-black + cinematic gold */
+  --gold: #C8A43A;
+  --gold-soft: #E0C56A;
+  --gold-rgb: 200, 164, 58;
+  --soft-rgb: 224, 197, 106;
 
-  --line: rgba(255, 255, 255, 0.05);
+  --line: rgba(255, 255, 255, 0.08);
 }
 
 /* =========================
-   COLOUR THEMES
+   COLOUR THEMES (each is independent)
    ========================= */
 :root[data-theme="crimson"] { --gold: #e0453f; --gold-soft: #ff7b73; --gold-rgb: 224, 69, 63;  --soft-rgb: 255, 123, 115; }
 :root[data-theme="ice"]     { --gold: #4fb3e8; --gold-soft: #8fd3f5; --gold-rgb: 79, 179, 232; --soft-rgb: 143, 211, 245; }
@@ -79,7 +79,7 @@ body::after {
   width: 100%;
   padding: 24px 0;
   z-index: 100;
-  background: rgba(8, 11, 20, 0.7);
+  background: rgba(5, 5, 5, 0.7);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
@@ -147,7 +147,7 @@ main {
   justify-content: center;
   padding-top: 80px;
   position: relative;
-  isolation: isolate; /* keeps the glow behind the hero text */
+  isolation: isolate; /* keeps the glow and brain behind the hero text */
 }
 
 .hero::before {
@@ -156,6 +156,31 @@ main {
   background: radial-gradient(circle at 35% 35%, var(--gold) 40%, var(--gold-soft) 100%);
   opacity: 0.15; filter: blur(120px);
   pointer-events: none; z-index: -1;
+}
+
+/* Neural brain: CSS-only (inline SVG used as a mask), tinted by the
+   active theme colour. No image file needed. */
+.hero::after {
+  --brain-art: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 640'%3E%3Cg fill='none' stroke='%23C8A43A' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke-width='3' d='M150,310 C120,230 180,130 290,110 C370,65 510,65 580,120 C670,130 735,215 710,300 C735,345 710,410 650,420 L560,425 C540,445 500,450 470,440 C440,470 380,470 350,445 C300,455 240,440 215,400 C170,390 140,355 150,310 Z'/%3E%3Cpath stroke-width='3' d='M556,428 C560,495 640,508 664,432'/%3E%3Cpath stroke-width='2' stroke-opacity='0.6' d='M580,452 C600,470 630,468 646,450 M575,476 C600,492 632,488 650,470'/%3E%3Cpath stroke-width='3' d='M478,444 C484,490 490,522 492,562 L520,562 C516,522 512,486 506,452'/%3E%3Cg stroke-width='2' stroke-opacity='0.6'%3E%3Cpath d='M205,300 C240,235 300,262 335,208'/%3E%3Cpath d='M300,150 C340,185 330,235 380,245 C430,255 440,200 480,190'/%3E%3Cpath d='M400,100 C410,140 450,150 470,185'/%3E%3Cpath d='M520,95 C525,140 575,150 590,190 C600,220 560,245 520,250'/%3E%3Cpath d='M640,170 C620,210 650,245 690,255'/%3E%3Cpath d='M560,300 C530,330 480,325 450,300 C420,275 380,300 360,330'/%3E%3Cpath d='M230,360 C280,340 310,380 360,380 C410,380 420,340 470,350'/%3E%3Cpath d='M600,340 C580,375 540,385 520,380'/%3E%3Cpath d='M250,372 C320,345 400,345 460,378'/%3E%3C/g%3E%3Cg stroke-width='1.5' stroke-opacity='0.4'%3E%3Cpath d='M205,300 L300,150 L380,245 L480,190 L520,95 L590,190 L560,300 L450,300 L360,330 L230,360 L205,300'/%3E%3Cpath d='M335,208 L450,300 M380,245 L360,330 M480,190 L560,300 M300,150 L335,208 M590,190 L640,170 M640,170 L690,255 M470,350 L560,300'/%3E%3C/g%3E%3C/g%3E%3Cg fill='%23C8A43A'%3E%3Ccircle cx='205' cy='300' r='5'/%3E%3Ccircle cx='300' cy='150' r='5'/%3E%3Ccircle cx='380' cy='245' r='5'/%3E%3Ccircle cx='480' cy='190' r='5'/%3E%3Ccircle cx='520' cy='95' r='5'/%3E%3Ccircle cx='590' cy='190' r='5'/%3E%3Ccircle cx='560' cy='300' r='5'/%3E%3Ccircle cx='450' cy='300' r='5'/%3E%3Ccircle cx='360' cy='330' r='5'/%3E%3Ccircle cx='230' cy='360' r='5'/%3E%3Ccircle cx='335' cy='208' r='4'/%3E%3Ccircle cx='640' cy='170' r='4'/%3E%3Ccircle cx='690' cy='255' r='4'/%3E%3Ccircle cx='470' cy='350' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: min(720px, 100%);
+  aspect-ratio: 5 / 4;
+  transform: translateY(-46%);
+  background: var(--gold);
+  -webkit-mask-image: var(--brain-art);
+  mask-image: var(--brain-art);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .eyebrow, .section-label {
@@ -378,7 +403,7 @@ footer strong { color: #777; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(8, 11, 20, 0.9);
+  background: rgba(5, 5, 5, 0.9);
   color: var(--gold);
   border: 1px solid var(--gold);
   border-radius: 50%;
@@ -397,7 +422,7 @@ footer strong { color: #777; }
   right: max(16px, env(safe-area-inset-right, 0px));
   bottom: calc(max(16px, env(safe-area-inset-bottom, 0px)) + 60px);
   padding: 16px 18px;
-  background: rgba(8, 11, 20, 0.7);
+  background: rgba(5, 5, 5, 0.7);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 1px solid var(--line);
@@ -440,7 +465,7 @@ footer strong { color: #777; }
   outline-color: var(--white);
 }
 
-.swatch[data-theme-choice="gold"]    { background: #00D5E8; }
+.swatch[data-theme-choice="gold"]    { background: #C8A43A; }
 .swatch[data-theme-choice="crimson"] { background: #e0453f; }
 .swatch[data-theme-choice="ice"]     { background: #4fb3e8; }
 .swatch[data-theme-choice="emerald"] { background: #2fbf8a; }
@@ -448,8 +473,8 @@ footer strong { color: #777; }
 
 /* Fallback for browsers without backdrop-filter: make panels more opaque */
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-  .site-header { background: rgba(8, 11, 20, 0.96); }
-  .theme-panel { background: rgba(8, 11, 20, 0.98); }
+  .site-header { background: rgba(5, 5, 5, 0.96); }
+  .theme-panel { background: rgba(5, 5, 5, 0.98); }
 }
 
 /* =========================
@@ -460,6 +485,7 @@ footer strong { color: #777; }
   .nav { gap: 16px; }
   .nav a { font-size: 9px; letter-spacing: 1px; }
   .hero { padding-top: 60px; }
+  .hero::after { width: 100%; opacity: 0.1; }
   h1 { font-size: 18vw; }
 
   .section, .channel { padding: 90px 0; }
@@ -491,4 +517,4 @@ footer strong { color: #777; }
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-}
+  }
